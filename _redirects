@@ -1,0 +1,10 @@
+# Let's create a _redirects file with the appropriate content
+redirects_content = "/*    /index.html   200\n"
+
+# Save this as a _redirects file
+redirects_file_path = '/mnt/data/_redirects'
+
+with open(redirects_file_path, 'w') as redirects_file:
+    redirects_file.write(redirects_content)
+
+redirects_file_path
