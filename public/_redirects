@@ -1,5 +1,5 @@
 # Let's create a _redirects file with the appropriate content
-redirects_content = "/*    /index.html   200\n"
+redirects_content = "/*    ./index.html   200\n"
 
 # Save this as a _redirects file
 redirects_file_path = '/mnt/data/_redirects'
