@@ -1,0 +1,401 @@
+/* styles.css */
+:root {
+  --primary-color: #3498db; /* Blue */
+  --secondary-color: #2c3e50; /* Dark Blue */
+  --background-color: #f5f7fa; /* Light Grey */
+  --text-color: #333; /* Dark Text */
+  --card-bg: #ffffff; /* White Card Background */
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow Effect */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Navigation */
+nav {
+  background-color: var(--card-bg);
+  box-shadow: var(--shadow);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem; /* Increased vertical padding for more height */
+}
+
+.logo {
+  font-size: 2rem; /* Slightly larger logo font size */
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem; /* Add padding around links for better click area */
+  border-radius: .5rem; /* Rounded corners for links */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.nav-links a:hover {
+  background-color: rgba(52, 152, 219, 0.2); /* Light blue background on hover */
+}
+
+/* Optional styling to enhance appearance */
+.nav-links a.active {
+    border-bottom: 2px solid var(--primary-color); /* Active link indicator */
+}
+
+/* Main content */
+main {
+  margin-top: 80px; /* Space for fixed nav */
+}
+
+
+/* Add this to your styles.css */
+.contact-info {
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+}
+
+.contact-info i,
+.social-links i {
+  width: 20px; /* Fixed width for alignment */
+  margin-right: 10px;
+  color: var(--primary-color);
+}
+
+.social-links {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Sections */
+section {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+h1, h2, h3 {
+  color: var(--secondary-color);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+/* Adjust the main container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Modify the card grid layout */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+/* Enhance card styling */
+.card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-title {
+  background-color: #dbdbdb; /* Lighter grey background */
+  color: white; /* White text for contrast */
+  padding: 10px; /* Add some padding for better appearance */
+  border-radius: 8px 8px 0 0; /* Rounded corners on the top */
+  margin: 0; /* Remove default margin */
+}
+
+/* Adjust typography for better readability */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.home-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.card-grid {
+  display: flex; /* Change to flexbox for vertical stacking */
+  flex-direction: column; /* Stack items vertically */
+  gap: 2rem; /* Space between cards */
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.contact-info p,
+.social-links a {
+  margin-bottom: 0.5rem;
+}
+
+.social-links {
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card-grid {
+    gap: 1rem; /* Adjust gap for smaller screens */
+  }
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.profile-pic {
+  width: 180px; /* Increase width */
+  height: 240px; /* Set height for a rectangular shape */
+  border-radius: 15px; /* Rounded corners */
+  object-fit: cover; /* Ensure the image covers the area */
+  margin-right: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.profile-info {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-pic {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    width: 150px; /* Adjust size for mobile if needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* Skills section styles */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 20px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* Ensure consistent card styling */
+.card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+/* Responsive design for skills */
+@media (max-width: 768px) {
+  .skills-container {
+    justify-content: flex-start;
+  }
+  
+  .skill-button {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+
+/* Publications styles */
+.publications-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 800px; /* Maintain a reasonable max-width */
+  margin: 0 auto; /* Center the list */
+}
+
+.publication-item {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 1rem 1.5rem; /* Reduce vertical padding */
+  margin-bottom: 1rem; /* Reduce space between items */
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.publication-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.publication-title {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem; /* Reduce space after title */
+  line-height: 1.3; /* Tighten line height for multi-line titles */
+}
+
+.publication-authors {
+  font-style: italic;
+  margin-bottom: 0.2rem; /* Reduce space after authors */
+  font-size: 0.9rem; /* Slightly smaller font size */
+}
+
+.publication-details {
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 0.9rem; /* Slightly smaller font size */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .publication-item {
+    padding: 0.8rem 1rem; /* Further reduce padding on mobile */
+  }
+
+  .publication-title {
+    font-size: 1rem;
+  }
+
+  .publication-authors,
+  .publication-details {
+    font-size: 0.85rem;
+  }
+}
+
+/* Responsive design */
+@media (max-width:768px) {
+    .nav-container {
+        flex-direction: column; 
+        align-items:flex-start; 
+    }
+
+    .nav-links {
+        margin-top:.5rem; 
+        flex-direction:column; 
+        width:auto; 
+    }
+
+    .nav-links a {
+        padding:.5rem .75rem; 
+        width:auto; 
+        text-align:center; 
+    }
+}
